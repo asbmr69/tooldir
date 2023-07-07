@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tools</h1>
+
+<div id="tools">
+  <table>
+    <tr><th>Name</th>
+      <th>Description</th>
+      <th>Requirnment</th>
+      <th>Rating</th>
+      
+    </tr>
+  <% @tools.each do |tool| %>
+    <tr>
+      <td>
+        <%= link_to tool.name, tool %>
+        </td>
+      <td><%= tool.description %></td>
+      <td><%= tool.requirement %></td>
+      <td><%= tool.rating %></td>
+    </tr>
+    <% end %>
+
+  </table>
+
+<%= link_to "New tool", new_tool_path %>
